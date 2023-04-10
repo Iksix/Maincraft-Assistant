@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maincraft Assistant</title>
+
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/style.css">
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__container">
+            <a onclick="updatePages(0)" href="#" class="nav__logo underline"><strong>Minecraft</strong> Assistant</a>
+            <ul class="nav__list">
+                <li onclick="updatePages(1)" class="nav__item"><a href="#" class="nav__link nav__cc">CC</a></li>
+                <li onclick="updatePages(2)" class="nav__item"><a href="#" class="nav__link nav__ct">CraftTweaker</a></li>
+                <li class="nav__item"><a href="https://minecraft.fandom.com/ru/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" class="nav__link">Wiki</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="main__container">
+            <h1 class="main__title">Hello! This is MA by Iks#7777!</h1>
+            <div class="link__wrapper">
+                <img class="main__img" src="../img/code.svg">
+                <a class="main__github__link" href="#">GitHub</a>
+            </div>
+        </div>
+    </main>
+
+    <div class="coordinate-converter">
+        <div class="cc__container">
+            <p class="cc__title">Coordinate Converter</p>
+            <ul class="cc__inputs">
+                <li class="cc-list__item"><input placeholder="X" class="cc_input cc_input-x" type="number"></li>
+                <li class="cc-list__item"><input placeholder="Y" class="cc_input cc_input-y" type="number"></li>
+            </ul>
+            <div class="convert-to__wrapper">
+                <p class="convert-to__title">Convert To:</p>
+                <div class="select-world__btn isOverworld">Overworld</div>
+            </div>
+            <div class="convert__btn">convert</div>
+            <ul class="cc-result">
+                <li class="cc-result__title">Result:</li>
+                <li class="cc-result__coordinates">123 ~ 123*</li>
+            </ul>
+        </div>
+    </div>
+    <div class="craft-tweaker">
+        <div class="ct__container">
+            <p class="ct__title">Craft Tweaker</p>
+            <div class="ct__wrapper">
+                <div class="ct-settings-rows__wrapper">
+                    <input oninput="updateCt()" placeholder="X" class="ct-input ct-input-x" type="number">
+                    <input oninput="updateCt()" placeholder="Y" class="ct-input ct-input-y" type="number">
+                    <input placeholder="Y" class="ct-input ct-input-color" type="color">
+                    <div class="art">
+                        <input placeholder="item" class="ct-input ct-input-item" type="text">
+                        <input placeholder="item" class="ct-input ct-input-art__ch" type="checkbox">
+                    </div>
+                </div>
+                <ul class="ct__inputs">
+                </ul>
+                <div class="right__row">
+                    <div class="right-row__conainer">
+                        <ul class="ct-output__inputs">
+                            <li><input class="ct-right__input ct-output" placeholder="Output" type="text"></li>
+                            <li><input class="ct-right__input ct-o-count" placeholder="Output count" type="text"></li>
+                            <li><input class="ct-right__input ct-recipe-name" placeholder="Recipe name" type="text"></li>
+                            <li><input class="ct-right__input ct-recipe-name furnaceMode furnaceTime" placeholder="Time" type="number"></li>
+                            <li><input class="ct-right__input ct-recipe-name furnaceMode furnaceXp" placeholder="Xp" type="number"></li>
+                        </ul>
+                        <div class="selectMode ct-right__input">Select Mode</div>
+                        <div class="select__backdrop">
+                            <ul class="selectMode__list">
+                                <li onclick="changeMode('WORKBENCH')" class="selectMode__item">Minecraft workbench</li>
+                                <li onclick="changeMode('FURNACE')" class="selectMode__item">Minecraft furnace</li>
+                                <li onclick="changeMode('C_MECHANICAL-CRAFTER')" class="selectMode__item">Create Mechanical Crafter</li>
+                                <li onclick="changeMode('C_CRUSHING')" class="selectMode__item">Create Crushing</li>
+                            </ul>
+                        </div>
+                        <ul class="right_row__btns">
+                            <li onclick="generate()" class="generate__btn">Generate</li>
+                            <li class="replace__ch">Replace? <div class="replaceCh"></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="script-output__wrapper">Result:</div>
+        </div>
+    </div>
+    <script src="../scripts/pageControl.js"></script>
+    <script src="../scripts/cc.js"></script>
+    <script src="../scripts/ct.js"></script>
+
+</body>
+</html>

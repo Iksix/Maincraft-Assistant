@@ -1,0 +1,437 @@
+:root{
+    --black: #1F1F1F;
+    --purple: #BB8FCE;
+    --orange: #E67E22;
+    --darkPurple: #9B59B6;
+    --green: #2ECC71;
+    --red: #C0392B;
+    --blackContrast: #111;
+    --white: #fff;
+
+
+    --bgColor: var(--black);
+    --bgColorCont: var(--blackContrast);
+    --accent: var(--purple);
+}
+
+body {
+    background-color: var(--bgColor);
+}
+
+/* Main page */
+
+.main {
+    display: block;
+    color: #fff;
+}
+.main__container{
+    margin: 0 auto;
+    margin-top: 110px;
+    display: block;
+    width: 737px;
+    height: 499px;
+}
+.main__title{
+    user-select: none;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 52px;
+    text-align: center;
+    z-index: 1;
+}
+.main__img {
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    z-index: 0;
+}
+.link__wrapper{
+    margin: 0 auto;
+    margin-top: 52px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 528px;
+    height: 396px;
+    align-items: center;
+}
+.main__github__link{
+    color: #fff;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 500;
+    z-index: 1;
+    padding: 14px 180px;
+    border-radius: 15px;
+    background-color: var(--darkPurple);
+    transition: 0.25s;
+}
+.main__github__link:hover{
+    background-color: var(--accent);
+}
+
+/* Coordinate Converter */
+
+.coordinate-converter{
+    
+    position: relative;
+    display: none;
+    justify-content: center;
+}
+.cc__container{
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 111px;
+    background-color: var(--bgColor);
+    width: 606px;
+    height: 518px;
+    box-shadow: 10px 10px 16px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.cc__title {
+    user-select: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 52px;
+    text-align: center;
+    margin-top: 32px;
+}
+
+.cc__inputs{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    margin-top: 51px;
+}
+
+.cc_input{
+    user-select: none;
+    text-align: center;
+    color: var(--accent);
+    background-color: var(--bgColorCont);
+    width: 237px;
+    height: 48px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.convert-to__wrapper {
+    user-select: none;
+
+    width: 200px;
+    height: 91px;
+    margin: 0 auto;
+    margin-top: 27px;
+    text-align: center;
+}
+.convert-to__title{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.select-world__btn {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    padding: 5px 18px;
+    background-color: var(--bgColorCont);
+    border-radius: 5px;
+    margin-top: 16px;
+    transition: transform 0.25s;
+    color: var(--red);
+}
+.select-world__btn:hover{
+    transform: scale(1.1);
+}
+
+.select-world__btn.isOverworld{
+    color: var(--green);
+}
+
+.convert__btn{
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    width: 566px;
+    height: 48px;
+    background-color: var(--bgColorCont);
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.4em;
+    color: var(--accent);
+    border-radius: 10px;
+    margin-top: 60px;
+    transition: transform 0.2s;
+}
+.convert__btn:hover{
+    transform: scale(1.03);
+}
+
+.cc-result{
+    display: flex;
+    border-radius: 10px;
+    column-gap: 32px;
+    margin: 0 auto;
+    width: 566px;
+    height: 48px;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgColorCont);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.cc-result__title{
+    user-select: none;
+}
+
+.cc-result__coordinates{
+    color: #fff;
+    opacity: 50%;
+}
+
+
+/* CraftTweaker */
+
+.craft-tweaker{
+    position: relative;
+    display: block;
+}
+
+.ct__container{
+    position: relative;
+
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+    width: 1152px;
+    min-height: 651px;
+    box-shadow: 10px 10px 16px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.ct__title{
+    position: relative;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 52px;
+    color: #fff;
+    text-align: center;
+    padding-top: 28px;
+    user-select: none;
+}
+
+.ct__wrapper{
+    display: flex;
+}
+
+.ct-settings-rows__wrapper{
+    display: flex;
+    width: 152px;
+    height: 126px;
+    margin-top: 120px;
+    margin-left: 70px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.ct-input{
+    background-color: var(--bgColorCont);
+    text-align: center;
+    color: var(--accent);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    width: 152px;
+    border-radius: 10px;
+}
+.ct__inputs{
+    position: relative;
+    margin-top: 24px;
+    display: flex;
+    width: 364px;
+    column-gap: 12px;
+    row-gap: 12px;
+    flex-wrap:wrap;
+    margin-left: 173px;
+    transform-origin: 0 0;
+}
+.ct-item__input{
+    width: 113.3px;
+    height: 113.3px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--bgColorCont);
+    color: var(--accent);
+}
+
+.script-output__wrapper{
+    display: block;
+    width: 1012px;
+    min-height: 142px;
+    border-radius: 10px;
+    background-color: var(--bgColorCont);
+    color: var(--darkPurple);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.right-row__conainer{
+    margin-left: 32px;
+    width: 293px;
+    height: 364px;
+    margin-top: 26px;
+}
+
+.generate__btn{
+    display: flex;
+    width: 180px;
+    height: 48px;
+    background-color: var(--bgColorCont);
+    color: var(--accent);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.ct-output__inputs{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+}
+
+.ct-right__input {
+    width: 293px;
+    height: 32px;
+    background-color: var(--bgColorCont);
+    border-radius: 32px;
+    text-align: center;
+    color: var(--accent);
+}
+
+.selectMode {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    margin-top: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectMode__list{
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--bgColorCont);
+    width: 200px;
+    color: var(--darkPurple);
+    row-gap: 12px;
+    font-size: 12px;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 12px;
+    margin-left: 48px;
+    margin-top: 3px;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.25s;
+}
+
+.selectMode__list.active {
+    transform: scaleY(1);
+}
+
+.selectMode__item:hover{
+    cursor: pointer;
+    color: var(--accent);
+}
+
+.right_row__btns{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.replace__ch {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: var(--accent);
+    font-size: 20px;
+}
+
+.replaceCh{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: var(--red);
+    border-radius: 50%;
+    border: 3px solid var(--bgColorCont);
+}
+
+.replaceCh.active {
+    background-color: var(--green);
+}
+
+.furnaceMode {
+    position: absolute;
+    transform: scaleY(0);
+    transition: 0.25s;
+}
+.furnaceMode.active {
+    position: relative;
+    transform: scaleY(1);
+}
+
+.art {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.ct-input-item {
+    margin-right: 0;
+}
+
+.ct-input-art__ch {
+    margin: 0;
+    width: 32px;
+}
+
+.ct-item__div {
+    cursor: pointer;
+    display: flex;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
