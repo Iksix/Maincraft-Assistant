@@ -3,7 +3,7 @@ const cc = document.querySelector(".coordinate-converter");
 const ct = document.querySelector('.craft-tweaker');
 const pages = [main, cc, ct];
 
-let activePage = 2; // 0 - main | 1 - cc | 2 - ct
+let activePage = 0; // 0 - main | 1 - cc | 2 - ct
 
 function updatePages(number) {
     activePage = number;
